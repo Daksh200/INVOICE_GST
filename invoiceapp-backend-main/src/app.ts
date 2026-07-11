@@ -25,6 +25,7 @@ app.use(morgan("dev"));
 
 //Routes
 app.use("/api/auth", authRoutes);
+app.use("/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/invoices", invoiceRoutes);
 app.use("/api/stats", statsRoutes);
