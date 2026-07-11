@@ -32,17 +32,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const login = async (email: string, password: string) => {
-    const response = await api.post("/auth/login", { email, password });
+    const response = await api.post("/api/auth/login", { email, password });
     setUser(response.data.user);
   };
 
   const signup = async (email: string, password: string) => {
-    const response = await api.post("/auth/signup", { email, password });
+    const response = await api.post("/api/auth/signup", { email, password });
     setUser(response.data.user);
   };
 
   const logout = async () => {
-    await api.post("/auth/logout");
+    await api.post("/api/auth/logout");
     setUser(null);
   };
 
