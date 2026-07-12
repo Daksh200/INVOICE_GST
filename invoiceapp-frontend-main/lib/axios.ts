@@ -1,7 +1,8 @@
 import axios from "axios"
 
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api",
+  // Backend mounts routes under /api (e.g., /api/user, /api/invoices, /api/stats)
+  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api",
   withCredentials: true, // Send cookies (JWT)
 })
 
